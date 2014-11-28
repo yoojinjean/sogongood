@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define E 0.001
+#define E 5
 #define MAX 500
 double a0,a1,a2,a3;
 
