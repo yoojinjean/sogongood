@@ -6,7 +6,7 @@
 #include "LibrarianMenu.h"
 #define STUMAX 100
 //seungeun jjang
-
+//eunji jjang
 stuNum=1;
 STU student[STUMAX];
 
