@@ -107,22 +107,7 @@ void Search_title_lib(INFO book[])//삭제할때 책 제목 검색
 
 	printf("Insert Title: ");
 	scanf("%s", find);
-	/*
-	for(i=0;i<num;i++)
-	{
-		ret=fscanf(fp, "%c",book[i].Title);
-		printf("%s",book[i].Title);
-		if(ret==EOF)
-			break;
-		if(ret==find)
-		{
-			printf("Search book Result\n");
-			printf("Title: %d\nAuthor: %s\nPublisher: %s\nISBN: %s \nAvailability: %d\nRenting Student: %d\n"
-				, book[i].Title, book[i].Author, book[i].Publisher, book[i].ISBN,book[i].Avail,book[i].RentStu);
-			printf("undate found");
-		}
-	}
-	*/
+	
 	////////////////////////////////////////////////////
 	for (i = 0; i<num; i++)
 	{
