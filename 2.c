@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//bugfix¿« ¡÷ºÆ
 #define E 5
 #define MAX 500
 double a0,a1,a2,a3;
