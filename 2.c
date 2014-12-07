@@ -10,7 +10,7 @@ double f(double x)
         x=a0+a1*x+a2*(x*x)+a3*(x*x*x);
         return x;
 }
-
+//master·Î ¼öÁ¤
 double Bisect(double xl, double xu, double es)
 {
    int iter=0;
