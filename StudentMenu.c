@@ -7,6 +7,10 @@
 #define STUMAX 100
 //seungeun jjang
 //eunji jjang
+<<<<<<< HEAD
+=======
+//yoojin jjang
+>>>>>>> yoojin
 stuNum=1;
 STU student[STUMAX];
 
