@@ -5,7 +5,7 @@
 //#include "StudentMenu.h"
 #include "LibrarianMenu.h"
 
-
+ 
 int LibMenu()
 {
 	int menu;
@@ -37,9 +37,6 @@ int LibMenu()
 		
 		default:
 			printf("Wrong Number.\n\n");
-			system("pause");
-			system("cls");
-			LibMenu();
 		}
 	}
 }
@@ -72,29 +69,28 @@ void AddBook(INFO book[])//추가
 		scanf("%s",&book[num].ISBN);
 		printf("Availability: ");
 		scanf("%d",&book[num].Avail);         
+		printf("삽입되었습니다.\n\n");
 		num++; 
+		//Save_File(book[num]);
 }
 
 void Save_File(INFO book[]) //파일 저장 함수
 {
-	FILE * fp = fopen("bookinfo.txt","at");
 	int i;
-	fprintf(fp, "%d\t", num);
-
-	fprintf(fp, "%s %s %s %s %d \n", book[num-1].Title,book[num-1].Author, book[num-1].Publisher, book[num-1].ISBN, book[num-1].Avail);
-	
+	FILE * fp = fopen("bookinfo.txt","at");
+//	fprintf(fp,"책제목 작가 출판사 ISBN 대출현황\n");
+	for (i = 0; i<num; i++)
+	{	
+		fprintf(fp, "%s %s %s %s %d \n", book[i].Title,book[i].Author, book[i].Publisher, book[i].ISBN, book[i].Avail);
+	}
 	printf("Success!\n");
 	fclose(fp);
 }
-
-
-
 
 
 void Delete_File(INFO book[]) //파일 삭제 함수
 {
 	int i;
-	
 	FILE * fp = fopen("bookinfo.txt","at");
 	for (i = 0; i<num; i--)
 	{
@@ -102,76 +98,7 @@ void Delete_File(INFO book[]) //파일 삭제 함수
 	}
 	printf("Success!\n");
 	fclose(fp);
-
-/*
-	int i;
-	
-	FILE * fp = fopen("bookinfo.txt","at");
-	for (i = 0; i<num; i--)
-	{
-		fprintf(fp, "%s %s %s %s %d \n", book[i].Title,book[i].Author, book[i].Publisher, book[i].ISBN, book[i].Avail);
-	}
-	band=num;
-	printf("Success!\n");
-	fclose(fp);
-*/
-
 }
-
-/*
-void find_book_name(void)
-{	char *p=NULL;
-	char buff[100] = {0};
-	char answer;
-	char possible;
-	INFO *book = NULL;
-	printf("도서명을 입력하세요 : ");
-	gets(buff);
-	if(strlen(buff) == 0)
-	{
-		printf("\n도서명을 입력하세요!\n");
-		return;
-	}
-	set_book_head();
-	book = book_head;
-	book_find = NULL;
-		while(book)
-	{
-		p=strstr(book->name, buff);
-		if(p)
-		{
-			book_find = book;
-			printf("\n도서명 : ");
-			puts(book_find->name);
-			printf("출판사 : ");
-			puts(book_find->publisher);
-			printf("저자명 : ");
-			puts(book_find->author);
-			printf("ISBN : ");
-			puts(book_find->ISBN);
-			
-			printf("검색을 계속 하시겠습니까? (y/n)\n");
-			scanf("%c", &answer);
-			getchar();
-		
-		}
-			
-		if(answer == 'n' || answer == 'N')
-			break;
-		
-		book = book->next;
-	}
-	if(book_find == NULL)
-	{
-		printf("\n\n%s 은 책 목록에서 찾을 수 없습니다.\n\n", buff);
-	}
-}
-*/
-
-
-
-
-
 
 
 void Search_title_lib(INFO book[])//삭제할때 책 제목 검색
@@ -242,7 +169,6 @@ void DeleteBook(INFO book[])//삭제
 		}
 	}
 }
-
 
 void UpdateBook(INFO book[])
 {
