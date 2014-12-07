@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "MainMenu.h"
 //#include "StudentMenu.h"
+// mergetesting
 #include "LibrarianMenu.h"
 
 
@@ -20,7 +21,7 @@ int LibMenu()
 		{
 		
 		case 1:
-			AddBook(data);
+			AddBook(date); // data -> date
 			Save_File(data);
 			break;
 		case 2:
