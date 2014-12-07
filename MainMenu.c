@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+#include <Windows.h>
 #include "MainMenu.h"
-//#include "StudentMenu.h"
+#include "StudentMenu.h"
 #include "LibrarianMenu.h"
-
+////seung eun is jjang
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
 	while (1){
 
 		printf("Main Menu\n");
-		printf("1. Librarian mode\n2. Student mode\n3.Create ID\n\nINPUT: ");
+		printf("1. Librarian mode\n2. Student mode\n3.Create ID\n0.Exit\n\nINPUT: ");
 		scanf("%d", &menu);
 		switch (menu)
 		{
@@ -21,11 +22,14 @@ int main()
 			Login_Check();
 			break;
 		case 2:
-			//StuLogin();  
+			StuLogin();  
 			break;
 		case 3:
-			//CreateID();
+			CreateID();
 			break;
+		case 0:
+			exit(0);
+
 		default:
 			printf("Wrong Number.\n\n");
 		}
