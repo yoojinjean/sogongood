@@ -6,11 +6,15 @@
 #include "LibrarianMenu.h"
 #define STUMAX 100
 //seungeun jjang
+<<<<<<< HEAD
 //eunji jjang
 <<<<<<< HEAD
 =======
 //yoojin jjang
 >>>>>>> yoojin
+=======
+//eunji jjang jjang girl
+>>>>>>> a1d8d0dcba968036ca702c7c1153cbe4a2ec135f
 stuNum=1;
 STU student[STUMAX];
 
