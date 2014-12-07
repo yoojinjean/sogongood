@@ -20,7 +20,7 @@ int LibMenu()
 		{
 		
 		case 1:
-			AddBook(data);
+			AddBook(date); // data -> date
 			Save_File(data);
 			break;
 		case 2:
@@ -221,6 +221,9 @@ void Search_title_lib(INFO book[])//삭제할때 책 제목 검색
 
 	printf("Insert Title: ");
 	scanf("%s", find);
+<<<<<<< HEAD
+	
+=======
 >>>>>>> 7e038f72f213e3f0e67fe6a8e3f58669f794729f
 	/*
 	for(i=0;i<num;i++)
@@ -238,6 +241,7 @@ void Search_title_lib(INFO book[])//삭제할때 책 제목 검색
 		}
 	}
 	*/
+>>>>>>> origin/master
 	////////////////////////////////////////////////////
 <<<<<<< HEAD
 	/*
